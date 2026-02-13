@@ -44,3 +44,28 @@ Key Points:
 Partial Summaries:
 {combined_text}
 """
+
+STRUCTURED_SUMMARY_PROMPT = """
+You are a professional document summarizer.
+
+Summarize the following text in 150–180 words.
+
+TEXT:
+{text}
+"""
+
+CONFIDENCE_PROMPT = """
+Evaluate the quality of this summary.
+
+Criteria:
+- Coverage of main ideas
+- Clarity
+- Conciseness
+- Structure compliance
+- Word count between 150–180
+
+Return ONLY a confidence score between 0 and 1.
+
+Summary:
+{summary}
+"""

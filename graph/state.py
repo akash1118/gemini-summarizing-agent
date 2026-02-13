@@ -5,3 +5,7 @@ class GraphState(TypedDict):
     chunks: List[str]
     partial_summaries: List[str]
     summary: str
+    confidence_score: float
+    retry_count: int
+
+
