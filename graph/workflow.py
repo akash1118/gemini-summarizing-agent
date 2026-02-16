@@ -59,6 +59,7 @@ def build_graph():
     # 5️⃣ Document Path
     # -----------------------------
 
+    # Step 3: Conditional Routing
     workflow.add_conditional_edges(
         "check_length",
         route_after_check,

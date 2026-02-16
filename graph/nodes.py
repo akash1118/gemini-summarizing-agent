@@ -104,6 +104,22 @@ def generate_structured_summary(state: GraphState):
     print(f"history =============> {history}")
     
     return {"summary": parsed, "history": history}
+
+    print(f"text===========>{text}")
+    prompt = STRUCTURED_SUMMARY_PROMPT.format(text=text)
+
+    response = structured_llm.invoke(prompt)
+
+    try:
+        parsed = response.__dict__
+    except Exception:
+        # fallback if model outputs invalid json
+        parsed = {
+            "overview": response.content,
+            "key_points": [],
+            "word_count": len(response.content.split())
+        }
+        return {"summary": parsed}
     
 
 def evaluate_confidence(state):
