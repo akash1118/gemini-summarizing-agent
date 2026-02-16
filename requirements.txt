@@ -4,3 +4,6 @@ langchain-google-genai
 python-dotenv
 gradio
 pypdf
+duckduckgo-search
+langchain-community
+ddgs

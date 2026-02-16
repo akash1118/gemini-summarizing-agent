@@ -47,7 +47,7 @@ Partial Summaries:
 
 STRUCTURED_SUMMARY_PROMPT = """
 You are a professional document summarizer.
-
+{style_instruction}
 Summarize the following text in 150–180 words.
 
 TEXT:
